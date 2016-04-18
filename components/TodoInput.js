@@ -15,22 +15,17 @@ class TodoInput extends Component {
 		})
 	}
 
-	deleteLetter() {
-		this.setState({
-			inputText: this.state.inputText.substring(0, this.state.inputText.length - 1)
-		});
-	}
 
 	render() {
 		return (
 			<div>
 				<input 
 				type="text"
-				placeholder="This is going to be text"
+				placeholder="Type in your to do"
 				value={this.state.inputText}
 				onChange={this.handleChange.bind(this)}
 				/>
-				<TextDisplay text={this.state.inputText} deleteLetter={this.deleteLetter.bind(this)}/>
+				<button> Submit </button>
 			</div>
 		)
 			
