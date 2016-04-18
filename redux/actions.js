@@ -1,10 +1,11 @@
-export default actions = {
-	addTodo(text) {
+ let actions = {
+	addTodo: function(text) {
 		return {
-			type: 'Add_TODO',
+			type: 'ADD_TODO',
 			text: text
 		}
 	}
 }
 
-store.dispatch(addTodo('some text'))
+export default actions
+
