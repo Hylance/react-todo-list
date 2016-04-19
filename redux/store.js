@@ -1,10 +1,11 @@
 import { applyMiddleware, compose, createStore } from 'redux'
 import rootReducer from './reducer'
 import logger from 'redux-logger'
+import thunk from 'redux-thunk'
 
 //TODO :add middleware
 let finalCreateStore = compose (
-	applyMiddleware(logger())
+	applyMiddleware(thunk,logger())
 )(createStore)
 
 export default function configureStore (initialState = {todos: [], user: {} }) {
